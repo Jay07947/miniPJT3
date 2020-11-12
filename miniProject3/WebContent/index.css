@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: Jalnan;
+  src:{
+		  local('Jalnan'),
+		  url('/fonts/Jalnan.ttf');
+		}}
+	
+a{text-decoration : none; color : #E91213;} /* a태그 하이퍼링크 밑줄 없애주기 */
+.header { 
+		text-align: center;
+		border-bottom: 2px solid #E91213;
+}
+.navbar{
+	background:#FFFFFF;
+	position: fixed; top: 0;  width: 100%;   /* 스크롤 내려도 상단바 고정하기 */
+	margin: 0 auto;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 24px;
+	color : #E91213;
+}
+.navbar_logo{ margin-left:50px; }
+.nav_menu{
+			display : flex;
+			list-style: none;
+			padding-left: 0;
+			margin-right:50px;
+		}
+.nav_menu li {
+			padding : 8px 12px;
+		}
+.searchbox{
+			font-size: 20px;
+			border-color: #E91213;
+			border-radius: 3px;
+			width: 400px;
+			height: 40px;
+			vertical-align: middle;}
+			
+.main{
+	background:#000;    /* 배경 검정 */
+	color: white;       /* 글씨 흰색 */
+	font-family:Jalnan; font-size: 20px; font-weight:bold; text-align: center; /* 글씨체, 크기, 굵게, 가운데정렬 */
+	display:flex;       /*자식 컨텐츠를 flexbox로 만들기*/
+	flex-direction: column; /*자식 컨텐츠를 열단위로 정렬*/
+	padding:150px 100px 70px 70px;  /* 안쪽 테두리 여백 주기 */
+	margin: 0;
+}
+ 
+.main_content{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.main_content2{
+	 display:flex;
+	 flex-direction: row;
+	 justify-content: center;
+	 align-items: center;
+}
+.main_content2 > div {	margin-top:80px; margin-bottom:80px; padding: 50px;   }  
+
+
+.starRating{
+	unicode-bidi: bidi-override;
+ 	direction: rtl;
+	} 
+	
+.starRating > span {
+ display: inline-block;
+ position: relative;
+ width: 1.1em;
+}
+
+.starRating > span:hover:before,
+.starRating > span:hover ~ span:before {
+ content: "\2605";
+ position: absolute;
+ color: red;
+}
+
+  
+footer{background-color: #f0f0f0; margin:0 auto; width:100%;}
+.intro{
+	padding-top: 20px; padding-bottom: 20px; 
+	padding-left: 100px;
+	display: block;
+	width:700px;
+	color: #666666;
+	/* display:flex;    
+	justify-content:space-between;
+	align-items: center;
+	list-style: none; 
+	*/
+}
+.intro > p {
+			font-size: 18px;
+			font-weight: bold;
+}
